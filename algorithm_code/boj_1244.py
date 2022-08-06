@@ -14,12 +14,12 @@ students_number = int(input())
 for student in range(students_number):
 
 # 해당 학생의 성별, 받은 수를 입력받아 각각 변수에 넣어줌. 
-    sex, number = input().split()
+    gender, number = input().split()
     number = int(number)
 
 # 성별에 따라 스위치 변경 법이 다르므로, if문을 써서 구분해줌.
 # 성별이 남성인 경우 먼저 작성함.
-    if sex == '1':
+    if gender == '1':
 
 # 학생의 성별이 남성일 시, 해당 수의 배수에 해당하는 스위치의 상태를 변경함.
 # list의 경우 0부터 시작하므로, 1을 더해준 다음 number로 나눈 나머지가 0인 경우(즉, 받은 수의 배수일 경우)만 변경.
@@ -34,7 +34,7 @@ for student in range(students_number):
 
 # 학생의 성별이 여성일 시, 해당 수를 기준으로 대칭되게 위치한 각 인덱스의 value 값이 일치하고, 가장 많은 수의 스위치를 바꿀 수 있어야 함
 # 먼저 임의의 변수 x, y를 만들어줌. 숫자를 담을 것이기에 임의로 정수 0 값을 넣어줌.
-    elif sex == '2':
+    elif gender == '2':
         x, y = 0, 0
 # 학생이 받은 값에 -1을 해야 기준이 되는 스위치의 인덱스에 접근할 수 있으므로 (학생이 받은 값 - 1)한 값을 저장한 변수 num을 만들어줌 
         num = number - 1
@@ -77,8 +77,3 @@ for i in range(len(switch_status)):
         print(switch_status[i], end='\n')
     else:
         print(switch_status[i], end=' ')
-
-
-
-
-
