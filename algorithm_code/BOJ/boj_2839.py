@@ -1,26 +1,47 @@
 N = int(input())
+kg = [5, 3]
+cnt = cnt_1 = 0
+false = 0
 n = N
-cnt_5 = 0
-cnt_3 = 0
 
-while True:
-    if n == 1:
+while N == 0:
+
+    if N % 5 == 0:
+        cnt += N // 5
         break
-    elif n % 5 == 0:
-        cnt_5 = n // 5
-        n = 1
-    elif (n % 5) % 3:
-        n = n % 5
-        cnt_5 += 1
-    elif n % 3 == 0:
-        cnt_3 = n // 3
-        n = 1
+    
     else:
-        break
+        n -= 5
+        cnt_1 += 1
+        if (n - 5) < 5 and (n - 5) % 3 != 0:
+            if n % 3 == 0:
+                N = N // 3
+                cnt += N // 3
+                break
+            else:
+                false = -1
+                break
+        elif 
+            
+            
 
-total = cnt_3 + cnt_5
+print(cnt)
 
-if total == 0:
-    total = -1
+    
+    '''
+    elif (N % 5) % 3 == 0:
+        cnt += N // 5
+        N = N % 5
+        cnt += N // 3
+        N = N % 3
 
-print(total)
+    elif N % 3 == 0:
+        cnt += N // 3
+        N = N % 3
+
+    else:
+        cnt = -1
+    '''
+    
+
+
